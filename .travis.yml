@@ -9,3 +9,10 @@ before_script:
 run:
 - rake db:migrate
 - rake cleanup
+deploy:
+  provider: heroku
+  api_key:
+    secure: DWd1BckNBgZ779ZiwEkFCTtp6wFpb317JpiVVjII28x6KVX7uHSVJbXGEi0fc80e2rLSj9J6m10ESvuliXyhX1K+wYAT24ORJnaupin8vtsxMKtSeIU8sb/ZuFtsDGJRbIydctZu+EQnMKsIl0mM0S/HvaUfpxdgZvyUI+gVLbyL1fuPjZ4nszF55263HoVYQJpRfM2HoBatniZVVP13YIxITpDAtcHzHLP2iJtQ7raNGT7XgU+3wG5XOaGFT2dAhwuPipkkAf1XNwteZotlsYXhTRKzCGfHL+ZrtSqxftPR/yeIosDMXcmvyBwrP9bWgw+QbDE+GWSGpK9FF/1VAZ/TccyR2GTn3ZBAICdpRQsP1czZV+/DQJ8wehgx/ZHSfV6/IAB32AmcIYD6h/5lKwEuLbuEVW4y9vq9rknsqLprsgLkhk+qociWMjZckmqAElabx8SUtqPCkVg0rHTo+5kaqzAUMESJmg0WtUGwK5amHAh0LJipsF3PTg/EIUmWLhhanhKNSAALQQGt2ypjeS5E3Kil0NW8oE0n84rPBjaHjddDvN8fORJaRN7g1Tghu/ulB4SJmJm8ovLdzPiRCcJO+E1jOmsKDSaeYUXVNXzTA/t8CBHvlmwtsBU6fsxX5DxrR+WLOKfDKu9YSAU0YimnQNG9/fl83bVpsCrk7uQ=
+  app: testing-in-rails
+  on:
+    repo: lacewaves/testing-in-rails
